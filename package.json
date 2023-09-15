@@ -4,6 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "dev": "parcel index.html",
+    "build": "parcel build index.html",
+    "deploy": "rm -rf dist/ && npm build && gh-pages -d dist",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -16,6 +19,11 @@
   "author": "Nikita Grybovski",
   "license": "ISC",
   "dependencies": {
+    "cssnano": "^4.1.11",
+    "gh-pages": "^6.0.0",
     "parcel": "^2.9.3"
+  },
+  "devDependencies": {
+    "parcel-bundler": "^1.12.5"
   }
 }
