@@ -15,22 +15,28 @@ export function loginPage(router){
     container.className = "container"
     app.append(container)
 
+    let content = document.createElement('div')
+    content.className = "content"
+    container.append(content)
+
     let title = document.createElement("h2")
     title.innerHTML = "Login"
-    container.append(title)
+    content.append(title)
 
     let form = document.createElement("form")
     form.id = "loginForm"
-    container.append(form)
+    content.append(form)
     
     let username = document.createElement("input")
     username.type = "text"
     username.name = "username"
+    username.required = true
     username.placeholder = "Enter your username"
 
     let password = document.createElement("input")
     password.type = "password"
     password.name = "password"
+    password.required = true
     password.placeholder = "Enter your password"
 
     let button = document.createElement("button")
